@@ -1,0 +1,16 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: sampledb
+    ports:
+      - 5432:5432
+
+# /Applications/Postgres.app/Contents/Versions/12/bin/psql -hlocalhost -dsampledb -Upguser -Wexample
