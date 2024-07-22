@@ -12,7 +12,7 @@
 			<plugin>
     		<groupId>org.flywaydb</groupId>
     		<artifactId>flyway-maven-plugin</artifactId>
-    		<version>6.5.5</version>
+    		<version>10.15.2</version>
     		<configuration>
         </configuration>
 			</plugin>
@@ -22,10 +22,16 @@
   <dependencies>
  
     <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <version>9.4-1201-jdbc41</version>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>7.2.1.jre8</version>
     </dependency>
+
+      <dependency>
+    <groupId>org.flywaydb</groupId>
+    <artifactId>flyway-sqlserver</artifactId>
+    <version>10.15.2</version>
+  </dependency>
 
 
   </dependencies>
