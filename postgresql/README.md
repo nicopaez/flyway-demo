@@ -1,4 +1,4 @@
-Flyway Postgresl Sample
+Flyway Postgresql Sample
 =======================
 
 

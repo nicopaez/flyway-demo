@@ -1,6 +1,9 @@
-FlywayDB Sample
-===============
+Flyway Postgresql Sample
+=======================
+
+
+    docker compose up db
+    docker compose up migrator
 
 
 
-    mvn -Dflyway.configFiles=flyway.properties flyway:migrate
