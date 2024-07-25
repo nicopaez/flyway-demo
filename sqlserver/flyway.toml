@@ -1,0 +1,7 @@
+[environments.default]
+user="sa"
+password="Passw0rd"
+url='jdbc:sqlserver://localhost:1433;databaseName=sampledb;encrypt=false'
+
+[flyway]
+environment="default"

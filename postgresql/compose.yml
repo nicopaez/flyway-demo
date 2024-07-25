@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: Passw0rd!
+      POSTGRES_USER: jobvacancy
+      POSTGRES_DB: jobvacancy
+    ports:
+      - 5432:5432
+  migrator:
+    image: flyway/flyway:10-alpine
+    network_mode: host
+    volumes:
+      - ./flyway.toml:/flyway/conf/flyway.toml
+      - ./sql:/flyway/sql
+    command: migrate
+    depends_on:
+      - db

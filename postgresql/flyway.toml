@@ -1,0 +1,7 @@
+[environments.default]
+user="jobvacancy"
+password="Passw0rd!"
+url="jdbc:postgresql://localhost:5432/jobvacancy"
+
+[flyway]
+environment="default"
