@@ -1,17 +1,8 @@
 services:
   db:
-    image: nicopaez/mssql2019-sampledb
+    image: nicopaez/azure-sql-edge-sampledb
     environment:
       ACCEPT_EULA: 'Y'
       MSSQL_SA_PASSWORD: 'Passw0rd'      
     ports:
       - 1433:1433
-  migrator:
-    image: flyway/flyway:10-alpine
-    network_mode: host
-    volumes:
-      - ./flyway.toml:/flyway/conf/flyway.toml
-      - ./migrations:/flyway/sql
-    command: migrate
-    depends_on:
-      - db
